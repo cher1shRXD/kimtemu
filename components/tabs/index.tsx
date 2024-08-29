@@ -41,7 +41,9 @@ const Tabs = ({ state }: any) => {
             name={CURRENT_IDX === 0 ? "home" : "home-outline"}
             size={30}
             style={
-              theme.backgroundColor === "#1b1b1b" ? { color: "#F1F1F1" } : {}
+              theme.backgroundColor === "#1b1b1b"
+                ? { color: "#F1F1F1" }
+                : { color: "#333333" }
             }
           />
         </S.TabItem>
@@ -50,7 +52,9 @@ const Tabs = ({ state }: any) => {
             name={CURRENT_IDX === 1 ? "flash" : "flash-outline"}
             size={30}
             style={
-              theme.backgroundColor === "#1b1b1b" ? { color: "#F1F1F1" } : {}
+              theme.backgroundColor === "#1b1b1b"
+                ? { color: "#F1F1F1" }
+                : { color: "#333333" }
             }
           />
         </S.TabItem>
@@ -59,7 +63,9 @@ const Tabs = ({ state }: any) => {
             name={CURRENT_IDX === 2 ? "add-circle" : "add-circle-outline"}
             size={30}
             style={
-              theme.backgroundColor === "#1b1b1b" ? { color: "#F1F1F1" } : {}
+              theme.backgroundColor === "#1b1b1b"
+                ? { color: "#F1F1F1" }
+                : { color: "#333333" }
             }
           />
         </S.TabItem>
@@ -68,7 +74,9 @@ const Tabs = ({ state }: any) => {
             name={CURRENT_IDX === 3 ? "search" : "search-outline"}
             size={30}
             style={
-              theme.backgroundColor === "#1b1b1b" ? { color: "#F1F1F1" } : {}
+              theme.backgroundColor === "#1b1b1b"
+                ? { color: "#F1F1F1" }
+                : { color: "#333333" }
             }
           />
         </S.TabItem>
@@ -77,7 +85,9 @@ const Tabs = ({ state }: any) => {
             name={CURRENT_IDX === 4 ? "person" : "person-outline"}
             size={30}
             style={
-              theme.backgroundColor === "#1b1b1b" ? { color: "#F1F1F1" } : {}
+              theme.backgroundColor === "#1b1b1b"
+                ? { color: "#F1F1F1" }
+                : { color: "#333333" }
             }
           />
         </S.TabItem>
