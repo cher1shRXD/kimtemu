@@ -2,7 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import * as S from "./style";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { useTheme } from "../../context/theme/themeContext";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Animated } from "react-native";
 
 const Tabs = ({ state }: any) => {
@@ -11,7 +11,7 @@ const Tabs = ({ state }: any) => {
   const TAB_LIST = state.routeNames;
   const CURRENT_IDX = state.index;
 
-  const indicatorPosition = useRef(new Animated.Value(0));
+  const indicatorPosition = useRef<Animated.Value>(new Animated.Value(0));
 
   useEffect(() => {
     Animated.timing(indicatorPosition.current, {
@@ -41,7 +41,7 @@ const Tabs = ({ state }: any) => {
             name={CURRENT_IDX === 0 ? "home" : "home-outline"}
             size={30}
             style={
-              theme.backgroundColor === "#1b1b1b" ? { color: "#E1E1E1" } : {}
+              theme.backgroundColor === "#1b1b1b" ? { color: "#F1F1F1" } : {}
             }
           />
         </S.TabItem>
@@ -50,7 +50,7 @@ const Tabs = ({ state }: any) => {
             name={CURRENT_IDX === 1 ? "flash" : "flash-outline"}
             size={30}
             style={
-              theme.backgroundColor === "#1b1b1b" ? { color: "#E1E1E1" } : {}
+              theme.backgroundColor === "#1b1b1b" ? { color: "#F1F1F1" } : {}
             }
           />
         </S.TabItem>
@@ -59,7 +59,7 @@ const Tabs = ({ state }: any) => {
             name={CURRENT_IDX === 2 ? "add-circle" : "add-circle-outline"}
             size={30}
             style={
-              theme.backgroundColor === "#1b1b1b" ? { color: "#E1E1E1" } : {}
+              theme.backgroundColor === "#1b1b1b" ? { color: "#F1F1F1" } : {}
             }
           />
         </S.TabItem>
@@ -67,14 +67,18 @@ const Tabs = ({ state }: any) => {
           <Ionicons
             name={CURRENT_IDX === 3 ? "search" : "search-outline"}
             size={30}
-            style={theme.backgroundColor === "#1b1b1b" ? { color: "#ccc" } : {}}
+            style={
+              theme.backgroundColor === "#1b1b1b" ? { color: "#F1F1F1" } : {}
+            }
           />
         </S.TabItem>
         <S.TabItem onPress={() => focusTo(4)} activeOpacity={1}>
           <Ionicons
             name={CURRENT_IDX === 4 ? "person" : "person-outline"}
             size={30}
-            style={theme.backgroundColor === "#1b1b1b" ? { color: "#ccc" } : {}}
+            style={
+              theme.backgroundColor === "#1b1b1b" ? { color: "#F1F1F1" } : {}
+            }
           />
         </S.TabItem>
       </S.ItemWapper>
