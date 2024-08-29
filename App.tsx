@@ -1,5 +1,4 @@
 import Router from "./components/router";
-import Tabs from "./components/tabs";
 import { ThemeProvider } from "./context/theme/themeContext";
 import { NavigationContainer } from "@react-navigation/native";
 
