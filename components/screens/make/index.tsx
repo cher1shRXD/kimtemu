@@ -1,3 +1,4 @@
+import Header from '../../header'
 import { ThemedText } from '../../theme'
 import * as S from './style'
 
