@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../screens/home";
-import Shorts from "../screens/shorts";
+import Cart from "../screens/cart";
 import Make from "../screens/make";
 import Search from "../screens/search";
 import Profile from "../screens/profile";
@@ -17,14 +17,8 @@ const HomeScreenStack = () => {
         headerShown: false,
       }}
     >
-      <HomeScreen.Screen
-        name="Home"
-        component={Home}
-      />
-      <HomeScreen.Screen
-        name="Detail"
-        component={Detail}
-      />
+      <HomeScreen.Screen name="Home" component={Home} />
+      <HomeScreen.Screen name="Detail" component={Detail} />
     </HomeScreen.Navigator>
   );
 };
@@ -42,7 +36,7 @@ const Router = () => {
       tabBar={(props) => <Tabs {...props} />}
     >
       <TabScreen.Screen name="HomeScreen" component={HomeScreenStack} />
-      <TabScreen.Screen name="ShortsScreen" component={Shorts} />
+      <TabScreen.Screen name="ShortsScreen" component={Cart} />
       <TabScreen.Screen name="MakeScreen" component={Make} />
       <TabScreen.Screen name="SearchScreen" component={Search} />
       <TabScreen.Screen name="ProfileScreen" component={Profile} />

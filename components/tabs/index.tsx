@@ -2,7 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import * as S from "./style";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { useTheme } from "../../context/theme/themeContext";
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Animated } from "react-native";
 
 const Tabs = ({ state }: any) => {
@@ -12,6 +12,7 @@ const Tabs = ({ state }: any) => {
   const CURRENT_IDX = state.index;
 
   const indicatorPosition = useRef<Animated.Value>(new Animated.Value(0));
+
 
   useEffect(() => {
     Animated.timing(indicatorPosition.current, {
@@ -49,7 +50,7 @@ const Tabs = ({ state }: any) => {
         </S.TabItem>
         <S.TabItem onPress={() => focusTo(1)} activeOpacity={1}>
           <Ionicons
-            name={CURRENT_IDX === 1 ? "flash" : "flash-outline"}
+            name={CURRENT_IDX === 1 ? "cart" : "cart-outline"}
             size={30}
             style={
               theme.backgroundColor === "#1b1b1b"
